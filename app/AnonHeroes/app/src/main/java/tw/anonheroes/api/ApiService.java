@@ -14,7 +14,7 @@ import tw.anonheroes.model.pojo.Result;
  * Created by ivan on 8/22/15.
  */
 public class ApiService {
-    public static final String API_URL = "http://192.168.23.18:9000";
+    public static final String API_URL = "http://192.168.6.232:9000";
     public static final String TAG = "ivan";
     private Api mApi = null;
 
