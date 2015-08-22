@@ -10,6 +10,8 @@ public class GcmReceiveEvent {
     private boolean is119 = false;
     private boolean is110 = false;
     private boolean is113 = false;
+    private int major =1;
+    private int minor =1;
 
     public GcmReceiveEvent(String result){
         this.result = result;
@@ -54,4 +56,12 @@ public class GcmReceiveEvent {
     public void setIs113(boolean is113) {
         this.is113 = is113;
     }
+
+    public int getMajor() { return major;}
+
+    public void setMajor(int major) {this.major = major;}
+
+    public int getMinor() {return minor;}
+
+    public void setMinor(int minor) {this.minor = minor;}
 }
