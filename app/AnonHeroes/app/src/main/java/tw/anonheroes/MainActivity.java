@@ -37,6 +37,7 @@ import tw.anonheroes.api.ApiService;
 import tw.anonheroes.event.GcmReceiveEvent;
 import tw.anonheroes.model.pojo.ScanediBeacon;
 import tw.anonheroes.service.RegisterationIntentService;
+import tw.anonheroes.util.DialogUtil;
 
 public class MainActivity extends AppCompatActivity implements iBeaconScanManager.OniBeaconScan, USBeaconConnection.OnResponse  {
 
@@ -160,6 +161,7 @@ public class MainActivity extends AppCompatActivity implements iBeaconScanManage
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         EventBus.getDefault().register(this);
+
         if (checkPlayServices()) {
             // Start IntentService to register this application with GCM.
             Intent intent = new Intent(this, RegisterationIntentService.class);
@@ -246,21 +248,7 @@ public class MainActivity extends AppCompatActivity implements iBeaconScanManage
 
     public void onEventMainThread(GcmReceiveEvent event){
         Log.i("ivan", "onEventMainThread");
-        showDialog(event.getResult());
-    }
-
-    private void showDialog(String result){
-        AlertDialog.Builder builder = new AlertDialog.Builder(this.getApplicationContext());
-        builder.setTitle("AnonHeroes");
-        builder.setMessage("result");
-        builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialog, int whichButton) {
-                dialog.dismiss();
-            }
-        });
-        AlertDialog alert = builder.create();
-        alert.getWindow().setType(WindowManager.LayoutParams.TYPE_SYSTEM_ALERT);
-        alert.show();
+        DialogUtil.showCustomDialog(this, event);
     }
 
     @Override
