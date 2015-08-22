@@ -1,5 +1,7 @@
 package tw.anonheroes.service;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.util.Log;
 
@@ -13,8 +15,8 @@ public class GcmListenService extends GcmListenerService {
 
     @Override
     public void onMessageReceived(String from, Bundle data) {
-        // TODO: GET NOTIFICATION
-        Log.i(TAG, from + ": " + data.getString("message"));
+
+        Log.i(TAG, from + ": " + data.getString("data"));
         super.onMessageReceived(from, data);
     }
 }
