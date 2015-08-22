@@ -69,6 +69,86 @@ public class MainActivity extends AppCompatActivity implements iBeaconScanManage
 
     public static final String TAG = MainActivity.class.getSimpleName();
 
+    Handler mHandler= new Handler()
+    {
+        @Override
+        public void handleMessage(Message msg)
+        {
+            switch(msg.what)
+            {
+                case MSG_SCAN_IBEACON:
+                {
+                    int timeForScaning		= msg.arg1;
+                    int nextTimeStartScan	= msg.arg2;
+
+                    miScaner.startScaniBeacon(timeForScaning);
+                    this.sendMessageDelayed(Message.obtain(msg), nextTimeStartScan);
+                }
+                break;
+
+                case MSG_UPDATE_BEACON_LIST:
+                    verifyiBeacons();
+                    mHandler.sendEmptyMessageDelayed(MSG_UPDATE_BEACON_LIST, 500);
+                    break;
+
+                case MSG_SERVER_RESPONSE:
+                    switch(msg.arg1)
+                    {
+                        case USBeaconConnection.MSG_NETWORK_NOT_AVAILABLE:
+                            break;
+
+                        case USBeaconConnection.MSG_HAS_UPDATE:
+                            mBServer.downloadBeaconListFile();
+                            //Toast.makeText(BeaconMainActivity.this, "HAS_UPDATE.", Toast.LENGTH_SHORT).show();
+                            break;
+
+                        case USBeaconConnection.MSG_HAS_NO_UPDATE:
+                            //Toast.makeText(BeaconMainActivity.this, "No new BeaconList.", Toast.LENGTH_SHORT).show();
+                            break;
+
+                        case USBeaconConnection.MSG_DOWNLOAD_FINISHED:
+                            break;
+
+                        case USBeaconConnection.MSG_DOWNLOAD_FAILED:
+                            Toast.makeText(MainActivity.this, "Download file failed!", Toast.LENGTH_SHORT).show();
+                            break;
+
+                        case USBeaconConnection.MSG_DATA_UPDATE_FINISHED:
+                        {
+                            USBeaconList BList= mBServer.getUSBeaconList();
+
+                            if(null == BList)
+                            {
+                                Toast.makeText(MainActivity.this, "Data Updated failed.", Toast.LENGTH_SHORT).show();
+                                //Log.d("debug", "update failed.");
+                            }
+                            else if(BList.getList().isEmpty())
+                            {
+                                Toast.makeText(MainActivity.this, "Data Updated but empty.", Toast.LENGTH_SHORT).show();
+                                //Log.d("debug", "this account doesn't contain any devices.");
+                            }
+                            else
+                            {
+                                Toast.makeText(MainActivity.this, "Data Updated("+ BList.getList().size()+ ")", Toast.LENGTH_SHORT).show();
+
+                                for(USBeaconData data : BList.getList())
+                                {
+                                    //Log.d("debug", "Name("+ data.name+ "), Ver("+ data.major+ "."+ data.minor+ ")");
+                                }
+                            }
+                        }
+                        break;
+
+                        case USBeaconConnection.MSG_DATA_UPDATE_FAILED:
+                            Toast.makeText(MainActivity.this, "UPDATE_FAILED!", Toast.LENGTH_SHORT).show();
+                            break;
+                    }
+                    break;
+            }
+        }
+    };
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -239,91 +319,14 @@ public class MainActivity extends AppCompatActivity implements iBeaconScanManage
             }
             //tempString = "major:" + data.major + ",minor:"+data.minor+",url:"+data.DistData.get("Near").strImageUrl;
         }
-        //setting.edit().putString();
+        //setting.edit().putString("PhotoInfoString",tempString);
     }
 
     public USBeaconList getBeaconList(){
         return mBServer.getUSBeaconList();
     }
 
-    Handler mHandler= new Handler()
-    {
-        @Override
-        public void handleMessage(Message msg)
-        {
-            switch(msg.what)
-            {
-                case MSG_SCAN_IBEACON:
-                {
-                    int timeForScaning		= msg.arg1;
-                    int nextTimeStartScan	= msg.arg2;
 
-                    miScaner.startScaniBeacon(timeForScaning);
-                    this.sendMessageDelayed(Message.obtain(msg), nextTimeStartScan);
-                }
-                break;
-
-                case MSG_UPDATE_BEACON_LIST:
-                    verifyiBeacons();
-                    mHandler.sendEmptyMessageDelayed(MSG_UPDATE_BEACON_LIST, 500);
-                    break;
-
-                case MSG_SERVER_RESPONSE:
-                    switch(msg.arg1)
-                    {
-                        case USBeaconConnection.MSG_NETWORK_NOT_AVAILABLE:
-                            break;
-
-                        case USBeaconConnection.MSG_HAS_UPDATE:
-                            mBServer.downloadBeaconListFile();
-                            //Toast.makeText(BeaconMainActivity.this, "HAS_UPDATE.", Toast.LENGTH_SHORT).show();
-                            break;
-
-                        case USBeaconConnection.MSG_HAS_NO_UPDATE:
-                            //Toast.makeText(BeaconMainActivity.this, "No new BeaconList.", Toast.LENGTH_SHORT).show();
-                            break;
-
-                        case USBeaconConnection.MSG_DOWNLOAD_FINISHED:
-                            break;
-
-                        case USBeaconConnection.MSG_DOWNLOAD_FAILED:
-                            Toast.makeText(MainActivity.this, "Download file failed!", Toast.LENGTH_SHORT).show();
-                            break;
-
-                        case USBeaconConnection.MSG_DATA_UPDATE_FINISHED:
-                        {
-                            USBeaconList BList= mBServer.getUSBeaconList();
-
-                            if(null == BList)
-                            {
-                                Toast.makeText(MainActivity.this, "Data Updated failed.", Toast.LENGTH_SHORT).show();
-                                //Log.d("debug", "update failed.");
-                            }
-                            else if(BList.getList().isEmpty())
-                            {
-                                Toast.makeText(MainActivity.this, "Data Updated but empty.", Toast.LENGTH_SHORT).show();
-                                //Log.d("debug", "this account doesn't contain any devices.");
-                            }
-                            else
-                            {
-                                Toast.makeText(MainActivity.this, "Data Updated("+ BList.getList().size()+ ")", Toast.LENGTH_SHORT).show();
-
-                                for(USBeaconData data : BList.getList())
-                                {
-                                    //Log.d("debug", "Name("+ data.name+ "), Ver("+ data.major+ "."+ data.minor+ ")");
-                                }
-                            }
-                        }
-                        break;
-
-                        case USBeaconConnection.MSG_DATA_UPDATE_FAILED:
-                            Toast.makeText(MainActivity.this, "UPDATE_FAILED!", Toast.LENGTH_SHORT).show();
-                            break;
-                    }
-                    break;
-            }
-        }
-    };
 
     private boolean checkPlayServices() {
         int resultCode = GooglePlayServicesUtil.isGooglePlayServicesAvailable(this);
