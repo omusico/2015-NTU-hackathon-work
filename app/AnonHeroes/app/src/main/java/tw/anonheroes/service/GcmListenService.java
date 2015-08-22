@@ -19,7 +19,7 @@ public class GcmListenService extends GcmListenerService{
 
     @Override
     public void onMessageReceived(String from, Bundle data) {
-        String message = data.getString("type").replace("Some(","").replace("","");
+        String message = data.getString("type").replace("Some(","").replace("\\)","");
         Log.i(TAG, from + ": " + message);
 
         SharedPreferences setting = getSharedPreferences("Preference", 1);
