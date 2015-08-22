@@ -6,6 +6,7 @@
     android:background="@android:color/white">
 
     <ImageView
+        android:id="@+id/background_image"
         android:layout_width="match_parent"
         android:layout_height="@dimen/fragment_background_height"
         android:background="@drawable/background"
