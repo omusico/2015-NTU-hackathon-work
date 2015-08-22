@@ -1,15 +1,24 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="center"
+    android:id="@+id/frame"
     android:orientation="horizontal">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="0dp"
+        android:src="@drawable/background"
+        android:layout_alignParentBottom="true" />
+
     <com.skyfishjy.library.RippleBackground
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/rippleBackground"
-        app:rb_color="#0099CC"
+        app:rb_color="#66CDAA"
         app:rb_radius="50dp"
         app:rb_rippleAmount="8"
         app:rb_duration="3000"
@@ -20,4 +29,4 @@
         android:layout_centerInParent="true"
         android:id="@+id/help"/>
     </com.skyfishjy.library.RippleBackground>
-</FrameLayout>
+</RelativeLayout>
