@@ -1,26 +1,25 @@
 package tw.anonheroes;
 
 
-import tw.anonheroes.service.RegisterationIntentService;
+import android.app.AlertDialog;
 import android.bluetooth.BluetoothAdapter;
 import android.content.BroadcastReceiver;
-import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.IntentFilter;
 import android.content.SharedPreferences;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
 import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.util.Log;
+import android.view.WindowManager;
 import android.widget.Toast;
 
 import com.THLight.USBeacon.App.Lib.USBeaconConnection;
 import com.THLight.USBeacon.App.Lib.USBeaconData;
-import com.THLight.USBeacon.App.Lib.USBeaconDistData;
 import com.THLight.USBeacon.App.Lib.USBeaconList;
 import com.THLight.USBeacon.App.Lib.USBeaconServerInfo;
 import com.THLight.USBeacon.App.Lib.iBeaconData;
@@ -30,14 +29,14 @@ import com.google.android.gms.common.GooglePlayServicesUtil;
 
 import java.io.File;
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Map;
-import java.util.Set;
 import java.util.UUID;
 
+import de.greenrobot.event.EventBus;
 import tw.anonheroes.api.ApiService;
+import tw.anonheroes.event.GcmReceiveEvent;
 import tw.anonheroes.model.pojo.ScanediBeacon;
+import tw.anonheroes.service.RegisterationIntentService;
 
 public class MainActivity extends AppCompatActivity implements iBeaconScanManager.OniBeaconScan, USBeaconConnection.OnResponse  {
 
@@ -160,6 +159,12 @@ public class MainActivity extends AppCompatActivity implements iBeaconScanManage
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        EventBus.getDefault().register(this);
+        if (checkPlayServices()) {
+            // Start IntentService to register this application with GCM.
+            Intent intent = new Intent(this, RegisterationIntentService.class);
+            startService(intent);
+        }
 
         /** create instance of iBeaconScanManager. */
         miScaner = new iBeaconScanManager(this, this);
@@ -231,16 +236,31 @@ public class MainActivity extends AppCompatActivity implements iBeaconScanManage
         }
         mHandler.sendEmptyMessageDelayed(MSG_UPDATE_BEACON_LIST, 500);
 
+    }
 
-        if (checkPlayServices()) {
-            // Start IntentService to register this application with GCM.
-            Intent intent = new Intent(this, RegisterationIntentService.class);
-            startService(intent);
-        }
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        EventBus.getDefault().unregister(this);
+    }
 
+    public void onEventMainThread(GcmReceiveEvent event){
+        Log.i("ivan", "onEventMainThread");
+        showDialog(event.getResult());
+    }
 
-
-
+    private void showDialog(String result){
+        AlertDialog.Builder builder = new AlertDialog.Builder(this.getApplicationContext());
+        builder.setTitle("AnonHeroes");
+        builder.setMessage("result");
+        builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int whichButton) {
+                dialog.dismiss();
+            }
+        });
+        AlertDialog alert = builder.create();
+        alert.getWindow().setType(WindowManager.LayoutParams.TYPE_SYSTEM_ALERT);
+        alert.show();
     }
 
     @Override
@@ -332,31 +352,9 @@ public class MainActivity extends AppCompatActivity implements iBeaconScanManage
         for(USBeaconData data : BList.getList())
         {
             //test
-//            if(minMajor == data.major && minMinor == data.minor){
+            if(minMajor == data.major && minMinor == data.minor){
                 new ApiService().sendHelp(data.major, data.minor, result);
-<<<<<<< HEAD
-//            }
-        }
-    }
-
-    public USBeaconList getBeaconList(){
-        return mBServer.getUSBeaconList();
-    }
-
-    Handler mHandler= new Handler()
-    {
-        @Override
-        public void handleMessage(Message msg)
-        {
-            switch(msg.what)
-            {
-                case MSG_SCAN_IBEACON:
-                {
-                    int timeForScaning		= msg.arg1;
-                    int nextTimeStartScan	= msg.arg2;
-=======
             }
->>>>>>> 2c9156c4b930e696e6aedfeb257b7bbc6049dbeb
 
             for (Object key : data.DistData.keySet()) {
                 //System.out.println("Key : " + key.toString() + " Value : " + data.DistData.get(key));

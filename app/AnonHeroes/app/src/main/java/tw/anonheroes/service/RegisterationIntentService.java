@@ -14,6 +14,7 @@ import tw.anonheroes.api.ApiService;
  */
 public class RegisterationIntentService extends IntentService {
     public static final String TAG = RegisterationIntentService.class.getSimpleName();
+    private static final int NOTIFICATION_ID = 123;
 
     public RegisterationIntentService(){
         super(TAG);
@@ -22,6 +23,8 @@ public class RegisterationIntentService extends IntentService {
     public RegisterationIntentService(String name) {
         super(name);
     }
+
+    @Override
     protected void onHandleIntent(Intent intent) {
         try {
             synchronized (TAG) {
@@ -40,4 +43,5 @@ public class RegisterationIntentService extends IntentService {
     private void sendRegistrationToServer(String token){
         new ApiService().sendRegisteration(token);
     }
+
 }
