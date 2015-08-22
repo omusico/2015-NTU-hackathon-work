@@ -15,7 +15,11 @@ import tw.anonheroes.model.pojo.Result;
  */
 public class ApiService {
     public static final String API_URL = "http://192.168.6.232:9000";
+<<<<<<< HEAD
     public static final String TAG = "ivan";
+=======
+    public static final String TAG = ApiService.class.getSimpleName();
+>>>>>>> 2c9156c4b930e696e6aedfeb257b7bbc6049dbeb
     private Api mApi = null;
 
     public ApiService(){
