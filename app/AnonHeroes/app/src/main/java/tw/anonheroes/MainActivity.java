@@ -189,11 +189,6 @@ public class MainActivity extends AppCompatActivity implements iBeaconScanManage
             }
             else
             {
-                NetworkInfo niMobile= cm.getNetworkInfo(ConnectivityManager.TYPE_MOBILE);
-                if(null != niMobile)
-                {
-                    boolean is3g	= niMobile.isConnectedOrConnecting();
-
                     USBeaconServerInfo info= new USBeaconServerInfo();
 
                     info.serverUrl		= HTTP_API;
@@ -202,7 +197,7 @@ public class MainActivity extends AppCompatActivity implements iBeaconScanManage
 
                     mBServer.setServerInfo(info, MainActivity.this);
                     mBServer.checkForUpdates();
-                }
+
             }
         }
         else
