@@ -70,14 +70,8 @@ public class MainActivityFragment extends Fragment {
                 Log.d("ivan", matches.get(i));
                 result += matches.get(i);
             }
-            getHelp(result);
+            ((MainActivity)getActivity()).getHelp(result);
         }
-
         super.onActivityResult(requestCode, resultCode, data);
     }
-
-    private void getHelp(String result){
-        new ApiService().getHelp(0, 0, result);
-    }
-
 }
