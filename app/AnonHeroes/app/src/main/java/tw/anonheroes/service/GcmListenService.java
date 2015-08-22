@@ -11,7 +11,7 @@ import com.google.android.gms.gcm.GcmListenerService;
  * Created by ivan on 8/22/15.
  */
 public class GcmListenService extends GcmListenerService {
-    public static final String TAG = GcmListenService.class.getSimpleName();
+    public static final String TAG = "ivan";
 
     @Override
     public void onMessageReceived(String from, Bundle data) {

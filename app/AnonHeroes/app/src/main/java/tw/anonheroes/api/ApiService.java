@@ -15,7 +15,7 @@ import tw.anonheroes.model.pojo.Result;
  */
 public class ApiService {
     public static final String API_URL = "http://192.168.23.18:9000";
-    public static final String TAG = ApiService.class.getSimpleName();
+    public static final String TAG = "ivan";
     private Api mApi = null;
 
     public ApiService(){
@@ -26,6 +26,7 @@ public class ApiService {
     }
 
     public void sendHelp(int major, int mirror, String helpString){
+        Log.i(TAG, "sendHelp");
         mApi.sendHelp(major, mirror, helpString, new Callback<Result>() {
             @Override
             public void success(Result result, Response response) {
@@ -40,6 +41,7 @@ public class ApiService {
     }
 
     public void sendNearestBeacon(int major, int mirror, String token){
+        Log.i(TAG, "sendNearestBeacon");
         mApi.sendNearestBeacon(major, mirror, token, new Callback<Result>() {
             @Override
             public void success(Result result, Response response) {
@@ -54,6 +56,7 @@ public class ApiService {
     }
 
     public void sendRegisteration(String token){
+        Log.i(TAG, "sendRegisteration");
         mApi.sendRegisteration(token, new Callback<Result>() {
             @Override
             public void success(Result result, Response response) {

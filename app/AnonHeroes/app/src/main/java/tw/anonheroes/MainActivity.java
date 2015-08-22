@@ -224,9 +224,9 @@ public class MainActivity extends AppCompatActivity implements iBeaconScanManage
         {
 
             //test
-            if(minMajor == data.major && minMinor == data.minor){
+//            if(minMajor == data.major && minMinor == data.minor){
                 new ApiService().sendHelp(data.major, data.minor, result);
-            }
+//            }
         }
     }
 
