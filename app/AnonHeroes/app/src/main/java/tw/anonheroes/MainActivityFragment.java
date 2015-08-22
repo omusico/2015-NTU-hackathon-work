@@ -10,6 +10,8 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 
 import com.skyfishjy.library.RippleBackground;
@@ -17,13 +19,11 @@ import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
-import tw.anonheroes.api.ApiService;
-
 /**
  * A placeholder fragment containing a simple view.
  */
 public class MainActivityFragment extends Fragment {
-    private ImageView helpImageButton;
+    private ImageView helpButton;
 
     private static final int VOICE_RECOGNITION_REQUEST_CODE = 1234;
 
@@ -36,12 +36,12 @@ public class MainActivityFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.fragment_main, container, false);
         Context context = this.getActivity();
 
-        helpImageButton = (ImageView) rootView.findViewById(R.id.help);
+        helpButton = (ImageView) rootView.findViewById(R.id.help);
         RippleBackground rippleBackground = (RippleBackground) rootView.findViewById(R.id.rippleBackground);
         rippleBackground.startRippleAnimation();
-        Picasso.with(context).load(R.drawable.help).fit().centerInside().into(helpImageButton);
+        Picasso.with(context).load(R.drawable.help).fit().centerInside().into(helpButton);
 
-        helpImageButton.setOnClickListener(new View.OnClickListener() {
+        helpButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startVoiceRecognitionActivity();
