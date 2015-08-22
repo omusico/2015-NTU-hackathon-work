@@ -12,6 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
 
 import com.skyfishjy.library.RippleBackground;
@@ -35,11 +36,12 @@ public class MainActivityFragment extends Fragment {
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_main, container, false);
         Context context = this.getActivity();
-
         helpButton = (ImageView) rootView.findViewById(R.id.help);
         RippleBackground rippleBackground = (RippleBackground) rootView.findViewById(R.id.rippleBackground);
         rippleBackground.startRippleAnimation();
         Picasso.with(context).load(R.drawable.help).fit().centerInside().into(helpButton);
+        Animation pulseAnimation = AnimationUtils.loadAnimation(this.getActivity(), R.anim.pulse);
+        helpButton.startAnimation(pulseAnimation);
 
         helpButton.setOnClickListener(new View.OnClickListener() {
             @Override
