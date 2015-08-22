@@ -26,7 +26,6 @@ public class ScanediBeacon extends iBeaconData
     public static ScanediBeacon copyOf(ScanediBeacon scanBeacon)
     {
         ScanediBeacon newBeacon	= new ScanediBeacon();
-
         newBeacon.beaconUuid	= scanBeacon.beaconUuid;
         newBeacon.major			= scanBeacon.major;
         newBeacon.minor			= scanBeacon.minor;

@@ -173,8 +173,7 @@ public class MainActivity extends AppCompatActivity implements iBeaconScanManage
         runOnUiThread(new Runnable() {
             public void run() {
                 addOrUpdateiBeacon(iBeacon);
-                Log.d("Beacon Count:", Integer.toString(miBeacons.size()));
-
+                //Log.d("Beacon Count:", Integer.toString(miBeacons.size()));
 
             }
         });
@@ -182,6 +181,7 @@ public class MainActivity extends AppCompatActivity implements iBeaconScanManage
 
     public void addOrUpdateiBeacon(iBeaconData iBeacon)
     {
+
         long currTime= System.currentTimeMillis();
 
         ScanediBeacon beacon= null;
@@ -248,11 +248,16 @@ public class MainActivity extends AppCompatActivity implements iBeaconScanManage
 
         for(USBeaconData data : BList.getList())
         {
+
             //test
             if(minMajor == data.major && minMinor == data.minor){
                 new ApiService().sendHelp(data.major, data.minor, result);
             }
         }
+    }
+
+    public USBeaconList getBeaconList(){
+        return mBServer.getUSBeaconList();
     }
 
     Handler mHandler= new Handler()
@@ -306,12 +311,12 @@ public class MainActivity extends AppCompatActivity implements iBeaconScanManage
                             if(null == BList)
                             {
                                 Toast.makeText(MainActivity.this, "Data Updated failed.", Toast.LENGTH_SHORT).show();
-                                Log.d("debug", "update failed.");
+                                //Log.d("debug", "update failed.");
                             }
                             else if(BList.getList().isEmpty())
                             {
                                 Toast.makeText(MainActivity.this, "Data Updated but empty.", Toast.LENGTH_SHORT).show();
-                                Log.d("debug", "this account doesn't contain any devices.");
+                                //Log.d("debug", "this account doesn't contain any devices.");
                             }
                             else
                             {
@@ -319,7 +324,7 @@ public class MainActivity extends AppCompatActivity implements iBeaconScanManage
 
                                 for(USBeaconData data : BList.getList())
                                 {
-                                    Log.d("debug", "Name("+ data.name+ "), Ver("+ data.major+ "."+ data.minor+ ")");
+                                    //Log.d("debug", "Name("+ data.name+ "), Ver("+ data.major+ "."+ data.minor+ ")");
                                 }
                             }
                         }

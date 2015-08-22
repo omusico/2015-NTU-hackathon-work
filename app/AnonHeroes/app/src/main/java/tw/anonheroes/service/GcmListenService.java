@@ -15,6 +15,8 @@ public class GcmListenService extends GcmListenerService {
     public void onMessageReceived(String from, Bundle data) {
         // TODO: GET NOTIFICATION
         Log.i(TAG, from + ": " + data.getString("message"));
+
+
         super.onMessageReceived(from, data);
     }
 }
