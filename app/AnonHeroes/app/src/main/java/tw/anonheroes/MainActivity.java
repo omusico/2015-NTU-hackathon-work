@@ -3,7 +3,10 @@ package tw.anonheroes;
 
 import tw.anonheroes.service.RegisterationIntentService;
 import android.bluetooth.BluetoothAdapter;
+import android.content.BroadcastReceiver;
+import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.content.SharedPreferences;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
@@ -17,6 +20,7 @@ import android.widget.Toast;
 
 import com.THLight.USBeacon.App.Lib.USBeaconConnection;
 import com.THLight.USBeacon.App.Lib.USBeaconData;
+import com.THLight.USBeacon.App.Lib.USBeaconDistData;
 import com.THLight.USBeacon.App.Lib.USBeaconList;
 import com.THLight.USBeacon.App.Lib.USBeaconServerInfo;
 import com.THLight.USBeacon.App.Lib.iBeaconData;
@@ -28,6 +32,7 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 import java.util.UUID;
 
@@ -68,6 +73,8 @@ public class MainActivity extends AppCompatActivity implements iBeaconScanManage
 
 
     public static final String TAG = MainActivity.class.getSimpleName();
+
+    public BroadcastReceiver receiver;
 
     Handler mHandler= new Handler()
     {
@@ -189,6 +196,11 @@ public class MainActivity extends AppCompatActivity implements iBeaconScanManage
             }
             else
             {
+                NetworkInfo niMobile= cm.getNetworkInfo(ConnectivityManager.TYPE_MOBILE);
+                if(null != niMobile)
+                {
+                    boolean is3g	= niMobile.isConnectedOrConnecting();
+
                     USBeaconServerInfo info= new USBeaconServerInfo();
 
                     info.serverUrl		= HTTP_API;
@@ -197,7 +209,20 @@ public class MainActivity extends AppCompatActivity implements iBeaconScanManage
 
                     mBServer.setServerInfo(info, MainActivity.this);
                     mBServer.checkForUpdates();
+                }else{
+                    NetworkInfo niWifi= cm.getNetworkInfo(ConnectivityManager.TYPE_WIFI);
 
+                    boolean is3g	= niWifi.isConnectedOrConnecting();
+
+                    USBeaconServerInfo info= new USBeaconServerInfo();
+
+                    info.serverUrl		= HTTP_API;
+                    info.queryUuid		= QUERY_UUID;
+                    info.downloadPath	= STORE_PATH;
+
+                    mBServer.setServerInfo(info, MainActivity.this);
+                    mBServer.checkForUpdates();
+                }
             }
         }
         else
@@ -215,6 +240,7 @@ public class MainActivity extends AppCompatActivity implements iBeaconScanManage
 
 
 
+
     }
 
     @Override
@@ -227,7 +253,7 @@ public class MainActivity extends AppCompatActivity implements iBeaconScanManage
         runOnUiThread(new Runnable() {
             public void run() {
                 addOrUpdateiBeacon(iBeacon);
-                //Log.d("Beacon Count:", Integer.toString(miBeacons.size()));
+                Log.d("Beacon Count:", Integer.toString(miBeacons.size()));
 
             }
         });
@@ -288,7 +314,7 @@ public class MainActivity extends AppCompatActivity implements iBeaconScanManage
         ScanediBeacon beacon= null;
         USBeaconList BList= mBServer.getUSBeaconList();
 
-        //SharedPreferences setting = getSharedPreferences("Preference", 0);
+        SharedPreferences setting = getSharedPreferences("Preference", 1);
 
         int minMajor = 0, minMinor = 0;
         double minDistance = 0.0;
@@ -300,27 +326,26 @@ public class MainActivity extends AppCompatActivity implements iBeaconScanManage
                 minMajor = beacon.major;
                 minMinor = beacon.minor;
             }
-
-
-
         }
 
-        //String tempString ="";
+        String tempString ="";
         for(USBeaconData data : BList.getList())
         {
             //test
             if(minMajor == data.major && minMinor == data.minor){
                 new ApiService().sendHelp(data.major, data.minor, result);
             }
-            //tempString = "major:" + data.major + ",minor:"+data.minor+",url:"+data.DistData.get("Near").strImageUrl;
+
+            for (Object key : data.DistData.keySet()) {
+                //System.out.println("Key : " + key.toString() + " Value : " + data.DistData.get(key));
+                tempString += "major:" + Integer.toString(data.major) + ",minor:"+Integer.toString(data.minor)+",url:"+data.DistData.get(key).strImageUrl+"@";
+                break;
+            }
+            //tempString = "major:" + Integer.toString(data.major) + ",minor:"+Integer.toString(data.minor)+",url:"+data.DistData.get("Near").strImageUrl+"@";
         }
-        //setting.edit().putString("PhotoInfoString",tempString);
+        setting.edit().clear();
+        setting.edit().putString("PhotoInfoString",tempString).commit();
     }
-
-    public USBeaconList getBeaconList(){
-        return mBServer.getUSBeaconList();
-    }
-
 
 
     private boolean checkPlayServices() {
