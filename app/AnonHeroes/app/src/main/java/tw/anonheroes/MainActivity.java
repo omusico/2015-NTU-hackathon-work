@@ -1,5 +1,7 @@
 package tw.anonheroes;
 
+
+import tw.anonheroes.service.RegisterationIntentService;
 import android.bluetooth.BluetoothAdapter;
 import android.content.Intent;
 import android.net.ConnectivityManager;
@@ -20,6 +22,8 @@ import com.THLight.USBeacon.App.Lib.USBeaconList;
 import com.THLight.USBeacon.App.Lib.USBeaconServerInfo;
 import com.THLight.USBeacon.App.Lib.iBeaconData;
 import com.THLight.USBeacon.App.Lib.iBeaconScanManager;
+import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.GooglePlayServicesUtil;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -61,6 +65,8 @@ public class MainActivity extends AppCompatActivity implements iBeaconScanManage
 
     List<ScanediBeacon> miBeacons	= new ArrayList<ScanediBeacon>();
 
+
+    public static final String TAG = MainActivity.class.getSimpleName();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -123,6 +129,14 @@ public class MainActivity extends AppCompatActivity implements iBeaconScanManage
             //TODO:  network is not available handle
         }
         mHandler.sendEmptyMessageDelayed(MSG_UPDATE_BEACON_LIST, 500);
+
+
+        if (checkPlayServices()) {
+            // Start IntentService to register this application with GCM.
+            Intent intent = new Intent(this, RegisterationIntentService.class);
+            startService(intent);
+        }
+
     }
 
 
@@ -147,6 +161,7 @@ public class MainActivity extends AppCompatActivity implements iBeaconScanManage
 
         return super.onOptionsItemSelected(item);
     }
+
 
     @Override
     public void onResponse(int msg) {
@@ -235,7 +250,7 @@ public class MainActivity extends AppCompatActivity implements iBeaconScanManage
         {
             //test
             if(minMajor == data.major && minMinor == data.minor){
-                new ApiService().getHelp(data.major, data.minor, result);
+                new ApiService().sendHelp(data.major, data.minor, result);
             }
         }
     }
@@ -318,4 +333,19 @@ public class MainActivity extends AppCompatActivity implements iBeaconScanManage
             }
         }
     };
+
+    private boolean checkPlayServices() {
+        int resultCode = GooglePlayServicesUtil.isGooglePlayServicesAvailable(this);
+        if (resultCode != ConnectionResult.SUCCESS) {
+            if (GooglePlayServicesUtil.isUserRecoverableError(resultCode)) {
+                GooglePlayServicesUtil.getErrorDialog(resultCode, this, 9000).show();
+            } else {
+                Log.i(TAG, "This device is not supported.");
+                finish();
+            }
+            return false;
+        }
+        return true;
+    }
+
 }
