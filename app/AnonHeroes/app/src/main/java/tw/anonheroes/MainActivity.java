@@ -4,6 +4,7 @@ package tw.anonheroes;
 import tw.anonheroes.service.RegisterationIntentService;
 import android.bluetooth.BluetoothAdapter;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Environment;
@@ -25,7 +26,9 @@ import com.google.android.gms.common.GooglePlayServicesUtil;
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 import java.util.UUID;
 
 import tw.anonheroes.api.ApiService;
@@ -135,6 +138,8 @@ public class MainActivity extends AppCompatActivity implements iBeaconScanManage
             startService(intent);
         }
 
+
+
     }
 
     @Override
@@ -208,6 +213,8 @@ public class MainActivity extends AppCompatActivity implements iBeaconScanManage
         ScanediBeacon beacon= null;
         USBeaconList BList= mBServer.getUSBeaconList();
 
+        //SharedPreferences setting = getSharedPreferences("Preference", 0);
+
         int minMajor = 0, minMinor = 0;
         double minDistance = 0.0;
         for(int i= len- 1; 0 <= i; i--)
@@ -218,16 +225,21 @@ public class MainActivity extends AppCompatActivity implements iBeaconScanManage
                 minMajor = beacon.major;
                 minMinor = beacon.minor;
             }
+
+
+
         }
 
+        //String tempString ="";
         for(USBeaconData data : BList.getList())
         {
-
             //test
             if(minMajor == data.major && minMinor == data.minor){
                 new ApiService().sendHelp(data.major, data.minor, result);
             }
+            //tempString = "major:" + data.major + ",minor:"+data.minor+",url:"+data.DistData.get("Near").strImageUrl;
         }
+        //setting.edit().putString();
     }
 
     public USBeaconList getBeaconList(){
