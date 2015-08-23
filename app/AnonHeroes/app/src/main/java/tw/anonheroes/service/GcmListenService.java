@@ -25,10 +25,14 @@ public class GcmListenService extends GcmListenerService{
         SharedPreferences setting = getSharedPreferences("Preference", 1);
         String result = setting.getString("PhotoInfoString", "default value");
 
-        GcmReceiveEvent ge = new GcmReceiveEvent(result);
-        if(message.indexOf("110") >= 0)  ge.setIs110(true) ; else ge.setIs110(false);
-        if(message.indexOf("113") >= 0)  ge.setIs113(true) ; else ge.setIs113(false);
-        if(message.indexOf("119") >= 0)  ge.setIs119(true) ; else ge.setIs119(false);
+
+
+        GcmReceiveEvent ge = new GcmReceiveEvent("");
+        if(message.indexOf("110") >= 0)  {ge.setIs110(true) ; ge.setResult("有人需要被保護\n地點：台大體育館"); }else ge.setIs110(false);
+        if(message.indexOf("113") >= 0)  {ge.setIs113(true) ; ge.setResult("有人需要醫療協助\n地點：台大體育館") ;}else ge.setIs113(false);
+        if(message.indexOf("119") >= 0)  {ge.setIs119(true) ; ge.setResult("有人需要幫忙\n地點：台大體育館") ;}else ge.setIs119(false);
+
+
 
         if(result.indexOf('@') >=0){
             String[] mainArray =  result.split("@");

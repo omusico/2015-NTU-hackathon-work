@@ -340,9 +340,9 @@ public class MainActivity extends AppCompatActivity implements iBeaconScanManage
         for(USBeaconData data : BList.getList())
         {
             //test
-            if(minMajor == data.major && minMinor == data.minor){
-                new ApiService().sendHelp(data.major, data.minor, result);
-            }
+            //if(minMajor == data.major && minMinor == data.minor){
+                new ApiService().sendHelp(1, 1, result);
+            //}
 
             for (Object key : data.DistData.keySet()) {
                 //System.out.println("Key : " + key.toString() + " Value : " + data.DistData.get(key));
