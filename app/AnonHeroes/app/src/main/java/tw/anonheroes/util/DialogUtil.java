@@ -2,6 +2,7 @@ package tw.anonheroes.util;
 
 import android.app.Dialog;
 import android.content.Context;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -26,14 +27,17 @@ public class DialogUtil {
         ImageView icon113 = (ImageView) dialog.findViewById(R.id.icon113);
 
         resultText.setText(event.getResult());
-        Picasso.with(context).load(event.getUrl()).into(image);
+        Picasso.with(context).load(event.getUrl()).fit().centerCrop().into(image);
         if(event.is110()){
+            icon110.setVisibility(View.VISIBLE);
             Picasso.with(context).load(R.drawable.icon110).into(icon110);
         }
         if(event.is119()){
+            icon119.setVisibility(View.VISIBLE);
             Picasso.with(context).load(R.drawable.icon119).into(icon119);
         }
         if(event.is113()){
+            icon113.setVisibility(View.VISIBLE);
             Picasso.with(context).load(R.drawable.icon113).into(icon113);
         }
         dialog.show();
