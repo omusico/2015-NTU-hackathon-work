@@ -28,9 +28,11 @@ public class GcmListenService extends GcmListenerService{
 
 
         GcmReceiveEvent ge = new GcmReceiveEvent("");
-        if(message.indexOf("110") >= 0)  {ge.setIs110(true) ; ge.setResult("有人需要被保護\n地點：台大體育館"); }else ge.setIs110(false);
-        if(message.indexOf("113") >= 0)  {ge.setIs113(true) ; ge.setResult("有人需要醫療協助\n地點：台大體育館") ;}else ge.setIs113(false);
-        if(message.indexOf("119") >= 0)  {ge.setIs119(true) ; ge.setResult("有人需要幫忙\n地點：台大體育館") ;}else ge.setIs119(false);
+        if(message.indexOf("110") >= 0)  {ge.setIs110(true) ; ge.setResult("有人需要被保護\n地點：台大體育館"); }
+
+        else if(message.indexOf("119") >= 0)  {ge.setIs119(true) ; ge.setResult("有人需要醫療協助\n地點：台大體育館") ;}
+        else   {ge.setIs113(true) ; ge.setResult("有人需要協助\n地點：台大體育館") ;}
+
 
 
 
