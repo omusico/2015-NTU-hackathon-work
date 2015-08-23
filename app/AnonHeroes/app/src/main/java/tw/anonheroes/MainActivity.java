@@ -346,7 +346,7 @@ public class MainActivity extends AppCompatActivity implements iBeaconScanManage
 
             for (Object key : data.DistData.keySet()) {
                 //System.out.println("Key : " + key.toString() + " Value : " + data.DistData.get(key));
-                tempString += "major:" + Integer.toString(data.major) + ",minor:"+Integer.toString(data.minor)+",url:"+data.DistData.get(key).strImageUrl+"@";
+                tempString += "major:" + Integer.toString(data.major) + ",minor:"+Integer.toString(data.minor)+",url:"+data.DistData.get(key).strWebUrl+"@";
                 break;
             }
             //tempString = "major:" + Integer.toString(data.major) + ",minor:"+Integer.toString(data.minor)+",url:"+data.DistData.get("Near").strImageUrl+"@";
