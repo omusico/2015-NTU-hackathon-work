@@ -38,7 +38,7 @@ public class GcmListenService extends GcmListenerService{
             String[] mainArray =  result.split("@");
             String[] detailArray = mainArray[0].split(",");
 
-            ge.setUrl(detailArray[2]);
+            ge.setUrl(detailArray[2].replace("url:",""));
         }
 
         // TODO
