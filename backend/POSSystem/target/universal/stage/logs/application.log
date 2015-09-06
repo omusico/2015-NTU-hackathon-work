@@ -1,0 +1,270 @@
+2015-08-22 19:07:57,116 - [INFO] - from play in main 
+Application started (Prod)
+
+2015-08-22 19:07:57,262 - [INFO] - from play in main 
+Listening for HTTP on /0:0:0:0:0:0:0:0:9000
+
+2015-08-22 21:15:05,420 - [DEBUG] - from application in ForkJoinPool-2-worker-3 
+Result: {"multicast_id":5513694132526819845,"success":2,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1440303307138956%2a13303ff9fd7ecd"},{"message_id":"0:1440303307137134%2a13303ff9fd7ecd"}]}
+
+2015-08-22 21:15:05,420 - [DEBUG] - from application in ForkJoinPool-2-worker-1 
+Result: {"multicast_id":6219197902493163501,"success":2,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1440303307140577%2a13303ff9fd7ecd"},{"message_id":"0:1440303307140781%2a13303ff9fd7ecd"}]}
+
+2015-08-22 21:39:15,665 - [DEBUG] - from application in ForkJoinPool-2-worker-3 
+Result: {"multicast_id":5056612602175144712,"success":2,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1440304757448845%2a13303ff9fd7ecd"},{"message_id":"0:1440304757449368%2a13303ff9fd7ecd"}]}
+
+2015-08-22 21:39:15,667 - [DEBUG] - from application in ForkJoinPool-2-worker-1 
+Result: {"multicast_id":7630594566601175936,"success":2,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1440304757434899%2a13303ff9fd7ecd"},{"message_id":"0:1440304757434330%2a13303ff9fd7ecd"}]}
+
+2015-08-22 21:39:29,077 - [DEBUG] - from application in ForkJoinPool-2-worker-3 
+Result: {"multicast_id":6278151673066672771,"success":2,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1440304770823967%2a13303ff9fd7ecd"},{"message_id":"0:1440304770823966%2a13303ff9fd7ecd"}]}
+
+2015-08-22 21:39:29,080 - [DEBUG] - from application in ForkJoinPool-2-worker-3 
+Result: {"multicast_id":7892491368413325418,"success":2,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1440304770814022%2a13303ff9fd7ecd"},{"message_id":"0:1440304770814728%2a13303ff9fd7ecd"}]}
+
+2015-08-22 21:39:39,501 - [DEBUG] - from application in ForkJoinPool-2-worker-1 
+Result: {"multicast_id":7762020875314662841,"success":2,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1440304781272025%2a13303ff9fd7ecd"},{"message_id":"0:1440304781272241%2a13303ff9fd7ecd"}]}
+
+2015-08-22 21:39:39,513 - [DEBUG] - from application in ForkJoinPool-2-worker-1 
+Result: {"multicast_id":6770922942897140940,"success":2,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1440304781300264%2a13303ff9fd7ecd"},{"message_id":"0:1440304781300780%2a13303ff9fd7ecd"}]}
+
+2015-08-22 22:02:49,059 - [DEBUG] - from application in ForkJoinPool-2-worker-1 
+Result: {"multicast_id":5700798806224525401,"success":2,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1440306170885484%2a13303ff9fd7ecd"},{"message_id":"0:1440306170884853%2a13303ff9fd7ecd"}]}
+
+2015-08-22 22:02:49,191 - [DEBUG] - from application in ForkJoinPool-2-worker-1 
+Result: {"multicast_id":6642336515525969580,"success":2,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1440306170996227%2a13303ff9fd7ecd"},{"message_id":"0:1440306170996786%2a13303ff9fd7ecd"}]}
+
+2015-08-22 22:03:21,537 - [DEBUG] - from application in ForkJoinPool-2-worker-1 
+Result: {"multicast_id":7601805417686663045,"success":2,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1440306203361810%2a13303ff9fd7ecd"},{"message_id":"0:1440306203361026%2a13303ff9fd7ecd"}]}
+
+2015-08-22 22:03:21,548 - [DEBUG] - from application in ForkJoinPool-2-worker-1 
+Result: {"multicast_id":5957976055932400501,"success":2,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1440306203361717%2a13303ff9fd7ecd"},{"message_id":"0:1440306203361334%2a13303ff9fd7ecd"}]}
+
+2015-08-22 22:03:36,456 - [DEBUG] - from application in ForkJoinPool-2-worker-1 
+Result: {"multicast_id":9045122581752648857,"success":2,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1440306218268332%2a13303ff9fd7ecd"},{"message_id":"0:1440306218268518%2a13303ff9fd7ecd"}]}
+
+2015-08-22 22:03:36,511 - [DEBUG] - from application in ForkJoinPool-2-worker-1 
+Result: {"multicast_id":7680874513476606340,"success":2,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1440306218334966%2a13303ff9fd7ecd"},{"message_id":"0:1440306218334968%2a13303ff9fd7ecd"}]}
+
+2015-08-22 22:20:32,783 - [DEBUG] - from application in ForkJoinPool-2-worker-1 
+Result: {"multicast_id":5814222880846197285,"success":2,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1440307234692717%2a13303ff9fd7ecd"},{"message_id":"0:1440307234692957%2a13303ff9fd7ecd"}]}
+
+2015-08-22 22:20:32,804 - [DEBUG] - from application in ForkJoinPool-2-worker-1 
+Result: {"multicast_id":6204097305857952400,"success":2,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1440307234717906%2a13303ff9fd7ecd"},{"message_id":"0:1440307234717524%2a13303ff9fd7ecd"}]}
+
+2015-08-22 22:21:01,604 - [DEBUG] - from application in ForkJoinPool-2-worker-1 
+Result: {"multicast_id":7838489981887016402,"success":2,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1440307263518479%2a13303ff9fd7ecd"},{"message_id":"0:1440307263518782%2a13303ff9fd7ecd"}]}
+
+2015-08-22 22:21:01,647 - [DEBUG] - from application in ForkJoinPool-2-worker-1 
+Result: {"multicast_id":7540003844155331158,"success":2,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1440307263567013%2a13303ff9fd7ecd"},{"message_id":"0:1440307263567239%2a13303ff9fd7ecd"}]}
+
+2015-08-22 22:23:53,184 - [DEBUG] - from application in ForkJoinPool-2-worker-1 
+Result: {"multicast_id":7647468562122709081,"success":2,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1440307435097479%2a13303ff9fd7ecd"},{"message_id":"0:1440307435097205%2a13303ff9fd7ecd"}]}
+
+2015-08-22 22:23:53,419 - [DEBUG] - from application in ForkJoinPool-2-worker-1 
+Result: {"multicast_id":6680821949511170000,"success":2,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1440307435340940%2a13303ff9fd7ecd"},{"message_id":"0:1440307435340942%2a13303ff9fd7ecd"}]}
+
+2015-08-22 22:33:12,996 - [DEBUG] - from application in ForkJoinPool-2-worker-1 
+Result: {"multicast_id":4894242069975767509,"success":2,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1440307994906859%2a13303ff9fd7ecd"},{"message_id":"0:1440307994906860%2a13303ff9fd7ecd"}]}
+
+2015-08-22 22:33:13,071 - [DEBUG] - from application in ForkJoinPool-2-worker-1 
+Result: {"multicast_id":7954179995651908771,"success":2,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1440307994999964%2a13303ff9fd7ecd"},{"message_id":"0:1440307994999963%2a13303ff9fd7ecd"}]}
+
+2015-08-22 22:33:45,277 - [DEBUG] - from application in ForkJoinPool-2-worker-1 
+Result: {"multicast_id":8818189976071497448,"success":2,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1440308027195782%2a13303ff9fd7ecd"},{"message_id":"0:1440308027196856%2a13303ff9fd7ecd"}]}
+
+2015-08-22 22:33:45,324 - [DEBUG] - from application in ForkJoinPool-2-worker-1 
+Result: {"multicast_id":4653839002666112509,"success":2,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1440308027266941%2a13303ff9fd7ecd"},{"message_id":"0:1440308027266939%2a13303ff9fd7ecd"}]}
+
+2015-08-22 22:37:42,870 - [DEBUG] - from application in ForkJoinPool-2-worker-1 
+Result: {"multicast_id":7942009821607128540,"success":2,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1440308264804711%2a13303ff9fd7ecd"},{"message_id":"0:1440308264804633%2a13303ff9fd7ecd"}]}
+
+2015-08-22 22:37:42,876 - [DEBUG] - from application in ForkJoinPool-2-worker-1 
+Result: {"multicast_id":9053431279711642975,"success":2,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1440308264808017%2a13303ff9fd7ecd"},{"message_id":"0:1440308264808528%2a13303ff9fd7ecd"}]}
+
+2015-08-22 22:42:58,746 - [DEBUG] - from application in ForkJoinPool-2-worker-1 
+Result: {"multicast_id":7126255529416624226,"success":2,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1440308580685213%2a13303ff9fd7ecd"},{"message_id":"0:1440308580686350%2a13303ff9fd7ecd"}]}
+
+2015-08-22 22:42:58,925 - [DEBUG] - from application in ForkJoinPool-2-worker-1 
+Result: {"multicast_id":9160973584242796157,"success":2,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1440308580870837%2a13303ff9fd7ecd"},{"message_id":"0:1440308580870691%2a13303ff9fd7ecd"}]}
+
+2015-08-22 22:58:05,483 - [DEBUG] - from application in ForkJoinPool-2-worker-1 
+Result: {"multicast_id":4854412130816551080,"success":2,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1440309487463530%2a13303ff9fd7ecd"},{"message_id":"0:1440309487463736%2a13303ff9fd7ecd"}]}
+
+2015-08-22 22:58:05,508 - [DEBUG] - from application in ForkJoinPool-2-worker-1 
+Result: {"multicast_id":8800200346435325796,"success":2,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1440309487485855%2a13303ff9fd7ecd"},{"message_id":"0:1440309487485873%2a13303ff9fd7ecd"}]}
+
+2015-08-22 22:58:26,062 - [DEBUG] - from application in ForkJoinPool-2-worker-1 
+Result: {"multicast_id":5328903017815975555,"success":2,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1440309508037615%2a13303ff9fd7ecd"},{"message_id":"0:1440309508037617%2a13303ff9fd7ecd"}]}
+
+2015-08-22 22:58:26,118 - [DEBUG] - from application in ForkJoinPool-2-worker-1 
+Result: {"multicast_id":6565648284517793282,"success":2,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1440309508064127%2a13303ff9fd7ecd"},{"message_id":"0:1440309508064694%2a13303ff9fd7ecd"}]}
+
+2015-08-22 22:58:58,887 - [DEBUG] - from application in ForkJoinPool-2-worker-1 
+Result: {"multicast_id":6610536095161673575,"success":2,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1440309540858422%2a13303ff9fd7ecd"},{"message_id":"0:1440309540859474%2a13303ff9fd7ecd"}]}
+
+2015-08-22 22:58:58,901 - [DEBUG] - from application in ForkJoinPool-2-worker-1 
+Result: {"multicast_id":8145576903358582932,"success":2,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1440309540870540%2a13303ff9fd7ecd"},{"message_id":"0:1440309540870542%2a13303ff9fd7ecd"}]}
+
+2015-08-22 23:03:02,157 - [DEBUG] - from application in ForkJoinPool-2-worker-1 
+Result: {"multicast_id":7504696389073684173,"success":2,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1440309784146722%2a13303ff9fd7ecd"},{"message_id":"0:1440309784146725%2a13303ff9fd7ecd"}]}
+
+2015-08-22 23:03:02,180 - [DEBUG] - from application in ForkJoinPool-2-worker-1 
+Result: {"multicast_id":7724137749239318065,"success":2,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1440309784167166%2a13303ff9fd7ecd"},{"message_id":"0:1440309784166185%2a13303ff9fd7ecd"}]}
+
+2015-08-22 23:03:37,974 - [DEBUG] - from application in ForkJoinPool-2-worker-1 
+Result: {"multicast_id":7045897820870879154,"success":2,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1440309819963156%2a13303ff9fd7ecd"},{"message_id":"0:1440309819964519%2a13303ff9fd7ecd"}]}
+
+2015-08-22 23:03:38,068 - [DEBUG] - from application in ForkJoinPool-2-worker-1 
+Result: {"multicast_id":8194613384228675359,"success":2,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1440309820029362%2a13303ff9fd7ecd"},{"message_id":"0:1440309820029364%2a13303ff9fd7ecd"}]}
+
+2015-08-22 23:04:06,418 - [DEBUG] - from application in ForkJoinPool-2-worker-1 
+Result: {"multicast_id":4656946287577644078,"success":2,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1440309848394779%2a13303ff9fd7ecd"},{"message_id":"0:1440309848395566%2a13303ff9fd7ecd"}]}
+
+2015-08-22 23:04:06,457 - [DEBUG] - from application in ForkJoinPool-2-worker-1 
+Result: {"multicast_id":7051631299740884314,"success":2,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1440309848435584%2a13303ff9fd7ecd"},{"message_id":"0:1440309848435708%2a13303ff9fd7ecd"}]}
+
+2015-08-22 23:11:38,837 - [DEBUG] - from application in ForkJoinPool-2-worker-1 
+Result: {"multicast_id":5418856037404326524,"success":2,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1440310300836886%2a13303ff9fd7ecd"},{"message_id":"0:1440310300836884%2a13303ff9fd7ecd"}]}
+
+2015-08-22 23:11:38,880 - [DEBUG] - from application in ForkJoinPool-2-worker-1 
+Result: {"multicast_id":5245420647648589186,"success":2,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1440310300877408%2a13303ff9fd7ecd"},{"message_id":"0:1440310300877853%2a13303ff9fd7ecd"}]}
+
+2015-08-22 23:12:29,085 - [DEBUG] - from application in ForkJoinPool-2-worker-1 
+Result: {"multicast_id":7151364188854807254,"success":2,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1440310351084911%2a13303ff9fd7ecd"},{"message_id":"0:1440310351084913%2a13303ff9fd7ecd"}]}
+
+2015-08-22 23:12:29,112 - [DEBUG] - from application in ForkJoinPool-2-worker-1 
+Result: {"multicast_id":8225100048226074259,"success":2,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1440310351108503%2a13303ff9fd7ecd"},{"message_id":"0:1440310351109019%2a13303ff9fd7ecd"}]}
+
+2015-08-22 23:12:55,527 - [DEBUG] - from application in ForkJoinPool-2-worker-1 
+Result: {"multicast_id":6222098020197706362,"success":2,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1440310377524187%2a13303ff9fd7ecd"},{"message_id":"0:1440310377524976%2a13303ff9fd7ecd"}]}
+
+2015-08-22 23:12:55,542 - [DEBUG] - from application in ForkJoinPool-2-worker-1 
+Result: {"multicast_id":7141276819940817750,"success":2,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1440310377548925%2a13303ff9fd7ecd"},{"message_id":"0:1440310377548927%2a13303ff9fd7ecd"}]}
+
+2015-08-22 23:21:40,348 - [DEBUG] - from application in ForkJoinPool-2-worker-1 
+Result: {"multicast_id":7445746922673052209,"success":2,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1440310902347286%2a13303ff9fd7ecd"},{"message_id":"0:1440310902347924%2a13303ff9fd7ecd"}]}
+
+2015-08-22 23:21:40,354 - [DEBUG] - from application in ForkJoinPool-2-worker-1 
+Result: {"multicast_id":4769022042789064145,"success":2,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1440310902346362%2a13303ff9fd7ecd"},{"message_id":"0:1440310902347011%2a13303ff9fd7ecd"}]}
+
+2015-08-22 23:22:08,760 - [DEBUG] - from application in ForkJoinPool-2-worker-1 
+Result: {"multicast_id":9187292245475165058,"success":2,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1440310930769883%2a13303ff9fd7ecd"},{"message_id":"0:1440310930769823%2a13303ff9fd7ecd"}]}
+
+2015-08-22 23:22:08,763 - [DEBUG] - from application in ForkJoinPool-2-worker-1 
+Result: {"multicast_id":5071030145845032547,"success":2,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1440310930768696%2a13303ff9fd7ecd"},{"message_id":"0:1440310930767965%2a13303ff9fd7ecd"}]}
+
+2015-08-22 23:23:00,034 - [DEBUG] - from application in ForkJoinPool-2-worker-3 
+Result: {"multicast_id":7928127938895669232,"success":2,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1440310982050963%2a13303ff9fd7ecd"},{"message_id":"0:1440310982050017%2a13303ff9fd7ecd"}]}
+
+2015-08-22 23:23:00,073 - [DEBUG] - from application in ForkJoinPool-2-worker-3 
+Result: {"multicast_id":6283797673825110917,"success":2,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1440310982086846%2a13303ff9fd7ecd"},{"message_id":"0:1440310982086898%2a13303ff9fd7ecd"}]}
+
+2015-08-22 23:33:19,045 - [DEBUG] - from application in ForkJoinPool-2-worker-3 
+Result: {"multicast_id":5762398656238365149,"success":2,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1440311601085861%2a13303ff9fd7ecd"},{"message_id":"0:1440311601085862%2a13303ff9fd7ecd"}]}
+
+2015-08-22 23:33:19,093 - [DEBUG] - from application in ForkJoinPool-2-worker-3 
+Result: {"multicast_id":7260244611895693991,"success":2,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1440311601119519%2a13303ff9fd7ecd"},{"message_id":"0:1440311601119929%2a13303ff9fd7ecd"}]}
+
+2015-08-22 23:33:58,138 - [DEBUG] - from application in ForkJoinPool-2-worker-3 
+Result: {"multicast_id":7895483899610138120,"success":2,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1440311640162909%2a13303ff9fd7ecd"},{"message_id":"0:1440311640162907%2a13303ff9fd7ecd"}]}
+
+2015-08-22 23:33:58,203 - [DEBUG] - from application in ForkJoinPool-2-worker-3 
+Result: {"multicast_id":5149326570659121045,"success":2,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1440311640236976%2a13303ff9fd7ecd"},{"message_id":"0:1440311640236978%2a13303ff9fd7ecd"}]}
+
+2015-08-22 23:34:22,061 - [DEBUG] - from application in ForkJoinPool-2-worker-3 
+Result: {"multicast_id":7725891052249833434,"success":2,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1440311664100032%2a13303ff9fd7ecd"},{"message_id":"0:1440311664100742%2a13303ff9fd7ecd"}]}
+
+2015-08-22 23:34:22,090 - [DEBUG] - from application in ForkJoinPool-2-worker-3 
+Result: {"multicast_id":5343522531004992661,"success":2,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1440311664119613%2a13303ff9fd7ecd"},{"message_id":"0:1440311664119911%2a13303ff9fd7ecd"}]}
+
+2015-08-22 23:37:37,628 - [DEBUG] - from application in ForkJoinPool-2-worker-3 
+Result: {"multicast_id":6639216982659013662,"success":2,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1440311859669811%2a13303ff9fd7ecd"},{"message_id":"0:1440311859669229%2a13303ff9fd7ecd"}]}
+
+2015-08-22 23:37:37,659 - [DEBUG] - from application in ForkJoinPool-2-worker-3 
+Result: {"multicast_id":5487625080072087810,"success":2,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1440311859689622%2a13303ff9fd7ecd"},{"message_id":"0:1440311859689870%2a13303ff9fd7ecd"}]}
+
+2015-08-22 23:38:15,178 - [DEBUG] - from application in ForkJoinPool-2-worker-3 
+Result: {"multicast_id":9206091836580551879,"success":2,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1440311897223740%2a13303ff9fd7ecd"},{"message_id":"0:1440311897223742%2a13303ff9fd7ecd"}]}
+
+2015-08-22 23:38:15,209 - [DEBUG] - from application in ForkJoinPool-2-worker-3 
+Result: {"multicast_id":5124775340270031461,"success":2,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1440311897244456%2a13303ff9fd7ecd"},{"message_id":"0:1440311897244457%2a13303ff9fd7ecd"}]}
+
+2015-08-22 23:42:26,139 - [DEBUG] - from application in ForkJoinPool-2-worker-3 
+Result: {"multicast_id":6923632713180694818,"success":2,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1440312148183000%2a13303ff9fd7ecd"},{"message_id":"0:1440312148181003%2a13303ff9fd7ecd"}]}
+
+2015-08-22 23:42:26,154 - [DEBUG] - from application in ForkJoinPool-2-worker-3 
+Result: {"multicast_id":7739526976329298998,"success":2,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1440312148198719%2a13303ff9fd7ecd"},{"message_id":"0:1440312148197570%2a13303ff9fd7ecd"}]}
+
+2015-08-22 23:55:18,393 - [DEBUG] - from application in ForkJoinPool-2-worker-3 
+Result: {"multicast_id":5612845232024045770,"success":2,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1440312920450927%2a13303ff9fd7ecd"},{"message_id":"0:1440312920450961%2a13303ff9fd7ecd"}]}
+
+2015-08-22 23:55:18,402 - [DEBUG] - from application in ForkJoinPool-2-worker-3 
+Result: {"multicast_id":7695189727649212922,"success":2,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1440312920469221%2a13303ff9fd7ecd"},{"message_id":"0:1440312920469750%2a13303ff9fd7ecd"}]}
+
+2015-08-22 23:55:40,307 - [DEBUG] - from application in ForkJoinPool-2-worker-3 
+Result: {"multicast_id":4901587570728345265,"success":2,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1440312942370910%2a13303ff9fd7ecd"},{"message_id":"0:1440312942370912%2a13303ff9fd7ecd"}]}
+
+2015-08-22 23:55:40,535 - [DEBUG] - from application in ForkJoinPool-2-worker-3 
+Result: {"multicast_id":9129642121314533831,"success":2,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1440312942591861%2a13303ff9fd7ecd"},{"message_id":"0:1440312942592492%2a13303ff9fd7ecd"}]}
+
+2015-08-22 23:59:26,304 - [DEBUG] - from application in ForkJoinPool-2-worker-3 
+Result: {"multicast_id":8418657600990728670,"success":2,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1440313168385882%2a13303ff9fd7ecd"},{"message_id":"0:1440313168385462%2a13303ff9fd7ecd"}]}
+
+2015-08-22 23:59:26,305 - [DEBUG] - from application in ForkJoinPool-2-worker-1 
+Result: {"multicast_id":6784718211699827452,"success":2,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1440313168379982%2a13303ff9fd7ecd"},{"message_id":"0:1440313168380884%2a13303ff9fd7ecd"}]}
+
+2015-08-23 00:00:13,953 - [DEBUG] - from application in ForkJoinPool-2-worker-3 
+Result: {"multicast_id":5920481048786789337,"success":2,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1440313216033938%2a13303ff9fd7ecd"},{"message_id":"0:1440313216034922%2a13303ff9fd7ecd"}]}
+
+2015-08-23 00:00:13,977 - [DEBUG] - from application in ForkJoinPool-2-worker-3 
+Result: {"multicast_id":9090388408443131788,"success":2,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1440313216046183%2a13303ff9fd7ecd"},{"message_id":"0:1440313216046770%2a13303ff9fd7ecd"}]}
+
+2015-08-23 00:00:39,029 - [DEBUG] - from application in ForkJoinPool-2-worker-3 
+Result: {"multicast_id":5139443844610095023,"success":2,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1440313241084950%2a13303ff9fd7ecd"},{"message_id":"0:1440313241084952%2a13303ff9fd7ecd"}]}
+
+2015-08-23 00:00:39,040 - [DEBUG] - from application in ForkJoinPool-2-worker-3 
+Result: {"multicast_id":6965076924728257830,"success":2,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1440313241129059%2a13303ff9fd7ecd"},{"message_id":"0:1440313241129599%2a13303ff9fd7ecd"}]}
+
+2015-08-23 00:09:15,367 - [DEBUG] - from application in ForkJoinPool-2-worker-3 
+Result: {"multicast_id":6480630480789692514,"success":2,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1440313757448987%2a13303ff9fd7ecd"},{"message_id":"0:1440313757448399%2a13303ff9fd7ecd"}]}
+
+2015-08-23 00:09:15,371 - [DEBUG] - from application in ForkJoinPool-2-worker-3 
+Result: {"multicast_id":5172742000869615004,"success":2,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1440313757465949%2a13303ff9fd7ecd"},{"message_id":"0:1440313757465979%2a13303ff9fd7ecd"}]}
+
+2015-08-23 00:10:22,643 - [DEBUG] - from application in ForkJoinPool-2-worker-1 
+Result: {"multicast_id":6472658534798164420,"success":2,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1440313824738690%2a13303ff9fd7ecd"},{"message_id":"0:1440313824737543%2a13303ff9fd7ecd"}]}
+
+2015-08-23 00:10:22,682 - [DEBUG] - from application in ForkJoinPool-2-worker-1 
+Result: {"multicast_id":9207658152871432092,"success":2,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1440313824772134%2a13303ff9fd7ecd"},{"message_id":"0:1440313824771535%2a13303ff9fd7ecd"}]}
+
+2015-08-23 00:10:45,458 - [DEBUG] - from application in ForkJoinPool-2-worker-1 
+Result: {"multicast_id":7517175937958593478,"success":2,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1440313847550488%2a13303ff9fd7ecd"},{"message_id":"0:1440313847550490%2a13303ff9fd7ecd"}]}
+
+2015-08-23 00:10:45,484 - [DEBUG] - from application in ForkJoinPool-2-worker-1 
+Result: {"multicast_id":9041879995205628288,"success":2,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1440313847578464%2a13303ff9fd7ecd"},{"message_id":"0:1440313847578512%2a13303ff9fd7ecd"}]}
+
+2015-08-23 00:15:29,253 - [DEBUG] - from application in ForkJoinPool-2-worker-1 
+Result: {"multicast_id":6639201529597706667,"success":2,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1440314131343978%2a13303ff9fd7ecd"},{"message_id":"0:1440314131344519%2a13303ff9fd7ecd"}]}
+
+2015-08-23 00:15:29,540 - [DEBUG] - from application in ForkJoinPool-2-worker-1 
+Result: {"multicast_id":4978783332709507425,"success":2,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1440314131570780%2a13303ff9fd7ecd"},{"message_id":"0:1440314131570177%2a13303ff9fd7ecd"}]}
+
+2015-08-23 00:29:05,940 - [DEBUG] - from application in ForkJoinPool-2-worker-1 
+Result: {"multicast_id":8678124841117263076,"success":2,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1440314948056052%2a13303ff9fd7ecd"},{"message_id":"0:1440314948057553%2a13303ff9fd7ecd"}]}
+
+2015-08-23 00:29:05,978 - [DEBUG] - from application in ForkJoinPool-2-worker-1 
+Result: {"multicast_id":4853068772803368343,"success":2,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1440314948094453%2a13303ff9fd7ecd"},{"message_id":"0:1440314948095537%2a13303ff9fd7ecd"}]}
+
+2015-08-23 00:38:08,169 - [DEBUG] - from application in ForkJoinPool-2-worker-1 
+Result: {"multicast_id":8435608761313947828,"success":2,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1440315490290931%2a13303ff9fd7ecd"},{"message_id":"0:1440315490291739%2a13303ff9fd7ecd"}]}
+
+2015-08-23 00:38:08,172 - [DEBUG] - from application in ForkJoinPool-2-worker-1 
+Result: {"multicast_id":7373862029610298168,"success":2,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1440315490308969%2a13303ff9fd7ecd"},{"message_id":"0:1440315490310003%2a13303ff9fd7ecd"}]}
+
+2015-08-23 00:38:44,826 - [DEBUG] - from application in ForkJoinPool-2-worker-1 
+Result: {"multicast_id":8375076540951857116,"success":2,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1440315526918488%2a13303ff9fd7ecd"},{"message_id":"0:1440315526918490%2a13303ff9fd7ecd"}]}
+
+2015-08-23 00:38:44,885 - [DEBUG] - from application in ForkJoinPool-2-worker-1 
+Result: {"multicast_id":4952725411320724375,"success":2,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1440315527008578%2a13303ff9fd7ecd"},{"message_id":"0:1440315527009866%2a13303ff9fd7ecd"}]}
+
